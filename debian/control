@@ -1,0 +1,15 @@
+Source: dadd
+Section: user/other
+Priority: optional
+Maintainer: Karin <beyondk2000@gmail.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.3
+Homepage: https://www.facebook.com/profile.php?id=100005131424444
+
+Package: dadd
+Architecture: all
+Depends: meegotouchtheme
+Description: dadd theme like Nokia N950 Harmattan Beta
+ Show 'DEVELOPER EDITION' on status bar.
+XSBC-Maemo-Display-Name: dadd
+XB-Maemo-Icon-26: 

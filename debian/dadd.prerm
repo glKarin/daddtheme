@@ -1,0 +1,71 @@
+#!/bin/sh
+
+set -e
+
+DST_DIR="/";
+ROOT_DIR="/opt/dadd"
+BKP_DIR="${ROOT_DIR}/__bkp"
+DADD_DIR="${ROOT_DIR}/dd"
+FILES="/usr/share/themes/base/meegotouch/sysuid/style/statusarea.css /usr/share/themes/base/meegotouch/libmeegotouchhome/style/libmeegotouchviews-modified-default.css /usr/share/themes/blanco/meegotouch/constants.ini /usr/share/themes/base/meegotouch/images/dadd-landscape.png /usr/share/themes/base/meegotouch/images/dadd-portrait.png /usr/share/themes/blanco/meegotouch/images/backgrounds/meegotouch-desktop-bg.png ";
+XSESSION="mthome sysuid";
+_______________________________________________="-----------------------------------------------";
+
+case "$1" in
+	remove|upgrade|deconfigure)
+
+		if [ ! -d ${BKP_DIR} ]; then
+			echo "Original theme files has not backup! exit...";
+			exit 0;
+		fi
+
+		echo "Restore original theme files...";
+
+		for i in ${FILES}
+		do
+			if [ -f ${BKP_DIR}/$i ]; then
+				echo "Restore file -> ${BKP_DIR}/$i to ${DST_DIR}";
+				TDIR=${DST_DIR}/`dirname $i`;
+				if [ ! -d ${TDIR} ]; then
+					TSH="mkdir -p ${TDIR}";
+					echo ${TSH}; ${TSH};
+				fi
+				TSH="cp -f ${BKP_DIR}/$i ${DST_DIR}/$i";
+				echo ${TSH}; ${TSH};
+				echo "";
+			fi
+		done
+
+		echo "Original theme files restore finished.";
+		echo ${_______________________________________________};
+		echo "Remove backup theme files..."
+
+		TSH="rm -rf ${BKP_DIR}";
+		echo ${TSH}; ${TSH};
+
+		echo "Backup theme remove finished.";
+		echo ${_______________________________________________};
+
+		if [ "x" = "x0" ]; then
+			echo "Restart X session...";
+
+			for i in ${XSESSION}
+			do
+				TSH="initctl restart xsession/$i";
+				echo ${TSH}; ${TSH};
+			done
+
+			echo "Restart X session finished.";
+			echo ${_______________________________________________};
+		fi
+
+		exit 0;
+		;;
+
+	failed-upgrade)
+		;;
+
+	*)
+		echo "prerm called with unknown argument \`$1'" >&2
+		exit 1
+		;;
+esac

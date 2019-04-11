@@ -1,0 +1,17 @@
+opt/
+opt/dadd
+opt/dadd/dd
+opt/dadd/dd/usr
+opt/dadd/dd/usr/share
+opt/dadd/dd/usr/share/themes
+opt/dadd/dd/usr/share/themes/base
+opt/dadd/dd/usr/share/themes/blanco
+opt/dadd/dd/usr/share/themes/base/meegotouch
+opt/dadd/dd/usr/share/themes/base/meegotouch/images
+opt/dadd/dd/usr/share/themes/base/meegotouch/libmeegotouchhome
+opt/dadd/dd/usr/share/themes/base/meegotouch/libmeegotouchhome/style
+opt/dadd/dd/usr/share/themes/base/meegotouch/sysuid
+opt/dadd/dd/usr/share/themes/base/meegotouch/sysuid/style
+opt/dadd/dd/usr/share/themes/blanco/meegotouch
+opt/dadd/dd/usr/share/themes/blanco/meegotouch/images
+opt/dadd/dd/usr/share/themes/blanco/meegotouch/images/backgrounds

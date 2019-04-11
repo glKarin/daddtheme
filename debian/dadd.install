@@ -1,0 +1,7 @@
+usr/share/themes/base/meegotouch/images/dadd-landscape.png /opt/dadd/dd/usr/share/themes/base/meegotouch/images
+usr/share/themes/base/meegotouch/images/dadd-portrait.png /opt/dadd/dd/usr/share/themes/base/meegotouch/images
+usr/share/themes/base/meegotouch/libmeegotouchhome/style/libmeegotouchviews-modified-default.css /opt/dadd/dd/usr/share/themes/base/meegotouch/libmeegotouchhome/style
+usr/share/themes/base/meegotouch/sysuid/style/statusarea.css /opt/dadd/dd/usr/share/themes/base/meegotouch/sysuid/style
+usr/share/themes/blanco/meegotouch/constants.ini /opt/dadd/dd/usr/share/themes/blanco/meegotouch
+usr/share/themes/blanco/meegotouch/images/backgrounds/meegotouch-desktop-bg.png /opt/dadd/dd/usr/share/themes/blanco/meegotouch/images/backgrounds
+restart_xsession.sh /opt/dadd
